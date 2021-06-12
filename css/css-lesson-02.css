@@ -3,7 +3,7 @@
 body {
 	background-color: #A9CBB7;
 	color: #000;
-	font-size: 18px;
+	font-size: 20px;
 	font-family: 'Open Sans Condensed', sans-serif;
 	background: url('../images/sky.jpg');
 	backgroud-size: cover;
@@ -11,9 +11,9 @@ body {
  }
 
 #wrapper {
-	margin:  2px auto;
+	margin: 2em auto;
 	max-width: 960px;
-	padding: 0 2px;
+	padding: 0 20px;
  }
 
  .article {
@@ -21,11 +21,12 @@ body {
  	background-color: #fff;
 
  }
+
 img {
-	display:  block;
+	display: block;
 	width:  100%;
 	height:  auto;
-	margin: 2px 0;
+	margin: 30px 0;
 
  }
 
@@ -36,12 +37,12 @@ h1, p {
 
 p {
 	font-weight: 300;
-	line-height: 1.5 ;
+	line-height: 1.5;
  }
 
 p.byline {
 	color: #666;
-	font-size:  16px;
+	font-size: 16px;
 }
 
 h1 {
@@ -50,13 +51,11 @@ h1 {
 	margin-top:  0;
  }
 
- a {
 
- }
-	.article a {
-		color: #5E565A;
+.article a {
+	color: #5E565A;
  }
 
-	.article #:hover {
+.article a:hover {
 		text-decoration: none;
  }
