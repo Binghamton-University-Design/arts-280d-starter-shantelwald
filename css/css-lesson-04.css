@@ -2,20 +2,20 @@
 
 body {
 	color: #000;
-	font-size: 18px;
+	font-size: 22px;
 	font-family: 'Open Sans Condensed', sans-serif;
 	
  }
 
 #wrapper {
-	margin:  2em auto;
+	margin:  4em auto;
 	max-width: 960px;
 	padding: 0 30px;
  }
 
  .grid {
  	display: grid;
- 	grid-gap:  3rem;
+ 	grid-gap:  4rem;
  	/*grid-template-columns: 1fr 1fr 1fr*/
  	grid-template-columns: repeat(3, 1fr);
  }
@@ -41,7 +41,7 @@ body {
  }
 
  .block {
- 	background-color: blueviolet;
+ 	background-color: dimgray;
  }
 
  .wide {
