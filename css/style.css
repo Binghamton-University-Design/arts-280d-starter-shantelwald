@@ -1,19 +1,29 @@
-body {
-  background-color: #ffffff;
-  color: #333333;
-  font-family: 'Roboto Mono', monospace;
+/* vars */
+:root {
+  --background-color: pink;
+  --body-color: white;
 }
+
+
+body {
+  background-color: var(--background-color);
+  color: var(--body-color);
+  font-family: 'Lato', sans-serif;
+  }
 
 /*GENERAL*/
 
 
 h1, h2, h3, h4 {
   margin: 0;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Dancing Script', cursive;
 }
 
 h1 {
-  font-size: 4.2rem
+  font-size: 6rem;
+  color: black;
+
+
 }
 
 h2 {
@@ -21,7 +31,7 @@ h2 {
 }
 
 h3 {
-  font-size: 1.6rem;
+  font-size: 3rem;
 }
 
 h4 {
@@ -29,15 +39,19 @@ h4 {
 }
 
 #wrapper {
-  margin: 2rem auto;
-  max-width: 1220px;
-  padding: 0 2rem;
+  margin: 1rem auto;
+  max-width: 1000px;
+  padding: 10px;
 }
 
 /*MASTHEAD*/
 
-#masthead, #main {
-  margin-bottom: 2rem;
+
+.masthead {
+  width: 840px;
+  border: solid black 3px;
+  padding: 10px;
+  margin: 20px;
 }
 
 .grid div {
@@ -45,7 +59,7 @@ h4 {
 }
 
 #logo a {
-  color: mediumpurple;
+  color: var(--body-color);
   text-decoration: none;
   display: flex;
   width: 100%;
@@ -56,7 +70,7 @@ h4 {
 #logo h1 {
   letter-spacing: 1px;
   font-weight: 300;
-  font-size: 1.6rem;
+  font-size: 1.8rem;
 }
 
 #logo svg {
@@ -69,18 +83,18 @@ h4 {
 
 
 #nav a { 
-color: #000;
+color: var(--body-color);
 font-weight: 300; 
 letter-spacing: 2px; 
 text-decoration-color: transparent; 
 display: inline-block; 
 width: 100%; 
 text-align: center; 
-transition: text-decoration-color .3s ease-in-out;    use css transition bookmark
+transition: text-decoration-color .3s linear;    use css transition bookmark
 }
 
-#nav a:hover, #nav a.active  { 
-  text-decoration-color: #000;
+#nav a:hover  { 
+  text-decoration-color: var(--body-color);
 }
 
 #nav.active {
@@ -132,7 +146,7 @@ transition: text-decoration-color .3s ease-in-out;    use css transition bookmar
   .hamburger.is-active .hamburger-inner,
   .hamburger.is-active .hamburger-inner::before,
   .hamburger.is-active .hamburger-inner::after {
-    background-color: #000; }
+    background-color: var(--body-color); }
 
 .hamburger-box {
   width: 24px;
@@ -147,7 +161,7 @@ transition: text-decoration-color .3s ease-in-out;    use css transition bookmar
   .hamburger-inner, .hamburger-inner::before, .hamburger-inner::after {
     width: 24px;
     height: 2px;
-    background-color: #000;
+    background-color: var(--body-color);
     border-radius: 0px;
     position: absolute;
     transition-property: transform;
@@ -190,9 +204,22 @@ transition: text-decoration-color .3s ease-in-out;    use css transition bookmar
   height: 70vh;
 }
 
-#work h3 {
+
+
+#work h3, #writing h3, #portfolio h3 {
+  letter-spacing: 1px;
   margin-bottom: 2rem;
 }
+
+
+
+
+#work h3 a, #writings h3 a, #portfolio h3 a {
+  color: var(--body-color);
+  text-decoration: none;
+}
+
+
 
 .work-item {
   overflow: hidden;
@@ -200,8 +227,10 @@ transition: text-decoration-color .3s ease-in-out;    use css transition bookmar
   position: relative;
   width: 100%; 
   padding-top: calc((1 / 1) * 100%);
-  background-color: #000;
+  background-color: var(--body-color);
 }
+
+
 
 .work-item .inner {
   text-decoration: none;
@@ -239,6 +268,56 @@ transition: text-decoration-color .3s ease-in-out;    use css transition bookmar
   height: 100%;
 }
 
+.writing-item .date-holder {
+  margin-bottom: .25em;
+}
+
+.writing-item .date {
+  margin: 0;
+  font-size: .85rem;
+  padding: 0 4px;
+  color: var(--background-color);
+  display: inline-block;
+  background-color: var(--body-color);
+}
+
+.writing-item h2 a {
+  color: var(--body-color);
+  text-decoration-color: transparent; 
+  transition: text-decoration-color .3s ease-in-out;
+}
+
+.writing-item h2 a:hover {
+  color: var(--body-color);
+  text-decoration-color: var(--body-color); 
+}
+
+/*PORTFOLIO*/
+
+#portfolio {
+  margin-top: 2rem;
+}
+
+#portfolio .work-item {
+  padding-top: calc((9 / 16) * 100%);
+}
+
+#portfolio .work-item .inner .work-inside {
+  opacity: 1;
+}
+
+#portfolio p a {
+  color: var(--body-color);
+  text-decoration-color: var(--body-color); 
+  transition: text-decoration-color .3s ease-in-out;
+}
+
+#portfolio p a:hover {
+  text-decoration-color: transparent; 
+}
+
+
+
 /*FOOTER*/
 
 
@@ -246,8 +325,6 @@ transition: text-decoration-color .3s ease-in-out;    use css transition bookmar
   text-align: right;
   font-size: .85rem;
 }
-
-
 
 /*RESPONSIVE*/
 
@@ -262,7 +339,7 @@ transition: text-decoration-color .3s ease-in-out;    use css transition bookmar
     display: block;
   }
   #nav {
-    border-bottom: 1px solid #000;
+    border-bottom: 1px solid var(--body-color);
     padding-bottom: 1rem;
     display: none;
   }
@@ -297,7 +374,7 @@ transition: text-decoration-color .3s ease-in-out;    use css transition bookmar
 }
 
 body {
-    font-size: 18px;
+    font-size: 22px;
   }
 
 
