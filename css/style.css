@@ -22,8 +22,7 @@ h1, h2, h3, h4 {
 h1 {
   font-size: 6rem;
   color: black;
-
-
+  text-align: center; }
 }
 
 h2 {
@@ -47,11 +46,8 @@ h4 {
 /*MASTHEAD*/
 
 
-.masthead {
-  width: 840px;
-  border: solid black 3px;
-  padding: 10px;
-  margin: 20px;
+#masthead, #main {
+  margin-bottom:  2rem;
 }
 
 .grid div {
@@ -333,6 +329,8 @@ transition: text-decoration-color .3s linear;    use css transition bookmark
   body {
     font-size: calc(12px + 4 * ((100vw - 320px) / 960));
   }
+}
+
 
 @media all and (max-width: 699px) { 
   #nav-button {
@@ -353,7 +351,7 @@ transition: text-decoration-color .3s linear;    use css transition bookmark
     font-size: 3.2rem
   }
 
-  .work-item .inner:hover .work-inside {
+  .work-item .inner .work-inside {
   opacity: 1;
 }
 
@@ -368,7 +366,7 @@ transition: text-decoration-color .3s linear;    use css transition bookmark
   }
 
   #intro-holder {
-    padding: 0.5em;
+    padding: 0 5em;
   }
 
 }
