@@ -1,7 +1,7 @@
 /* vars */
 :root {
-  --background-color: pink;
-  --body-color: white;
+  --background-color: white;
+  --body-color: black;
 }
 
 
@@ -89,7 +89,7 @@ text-align: center;
 transition: text-decoration-color .3s linear;    use css transition bookmark
 }
 
-#nav a:hover  { 
+#nav a:hover, #nav a.active { 
   text-decoration-color: var(--body-color);
 }
 
@@ -268,6 +268,23 @@ transition: text-decoration-color .3s linear;    use css transition bookmark
   margin-bottom: .25em;
 }
 
+.writing-item img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.writing-item .caption {
+  font-size: .75rem;
+  color: black;
+  display: block;
+  width: 100%;
+  margin-top: .5rem;
+  margin-bottom: 2rem;
+  text-align: right;
+}
+
+
 .writing-item .date {
   margin: 0;
   font-size: .85rem;
@@ -288,10 +305,11 @@ transition: text-decoration-color .3s linear;    use css transition bookmark
   text-decoration-color: var(--body-color); 
 }
 
-/*PORTFOLIO*/
+/*PORTFOLIO + WRITING*/
 
-#portfolio {
+#portfolio, #writings {
   margin-top: 2rem;
+  margin-bottom: 2rem;
 }
 
 #portfolio .work-item {
@@ -372,7 +390,7 @@ transition: text-decoration-color .3s linear;    use css transition bookmark
 }
 
 body {
-    font-size: 22px;
+    font-size: 20px;
   }
 
 
